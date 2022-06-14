@@ -1,3 +1,10 @@
+Fake Database - db.json (for API) <br />
+To run this database - <br />
+--> npm install -g json-server <br />
+--> json-server --watch db.json <br />
+
+
+
 # SearchBox
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
