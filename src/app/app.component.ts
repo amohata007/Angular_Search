@@ -14,7 +14,7 @@ export class AppComponent implements OnInit{
 
   
   //total number of fields
-  displayedColumns: string[] = ['#', 'city', 'country','flag'];
+  displayedColumns: string[] = ['id', 'title', 'thumbnailUrl'];
   dataSource!: MatTableDataSource<any>;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -41,11 +41,15 @@ export class AppComponent implements OnInit{
       }
     })
   }
+  
 
+  
   // filter
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
+
+
 
     if (this.dataSource.paginator) {
       this.dataSource.paginator.firstPage();
